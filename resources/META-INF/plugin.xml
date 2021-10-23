@@ -1,6 +1,6 @@
 <idea-plugin>
   <id>com.hiyunhong.gradlekiller</id>
-  <name>GradleKiller</name>
+  <name>Gradle Killer</name>
   <version>1.0</version>
   <vendor email="smartcyh@hotmail.com" url="https://github.com/tsuixh">Tsuixh</vendor>
 
@@ -8,10 +8,11 @@
       When using Gradle, it is often because the background Gradle process is not finished, which leads to file occupation problems in compilation.<br>
       This plugin can close the Gradle process with one click, avoiding the tedious operation of closing process through the task manager.<br>
       Ctrl+Alt+K to kill gradle process.<br>
+      Project Repository: <a href="https://github.com/tsuixh/GradleKiller">https://github.com/tsuixh/GradleKiller</a>
     ]]></description>
 
   <change-notes><![CDATA[
-      <b>1.0</b><br> Realize the function of closing the Gradle process with one click<br>
+      <b>1.0</b> Realize the function of closing the Gradle process with one click<br>
     ]]>
   </change-notes>
 
