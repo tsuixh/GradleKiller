@@ -1,0 +1,38 @@
+<idea-plugin>
+  <id>com.hiyunhong.gradlekiller</id>
+  <name>GradleKiller</name>
+  <version>1.0</version>
+  <vendor email="smartcyh@hotmail.com" url="https://github.com/tsuixh">Tsuixh</vendor>
+
+  <description><![CDATA[
+      When using Gradle, it is often because the background Gradle process is not finished, which leads to file occupation problems in compilation.<br>
+      This plugin can close the Gradle process with one click, avoiding the tedious operation of closing process through the task manager.<br>
+      Ctrl+Alt+K to kill gradle process.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <b>1.0</b><br> Realize the function of closing the Gradle process with one click<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="GradleKiller.kill" class="com.hiyunhong.gradlekiller.KillGradleAction" text="Kill Gradle Action" icon="/icon/gradle.svg"
+            description="Click to kill gradle process.">
+      <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt K"/>
+    </action>
+  </actions>
+
+</idea-plugin>
